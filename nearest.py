@@ -31,13 +31,6 @@ def bis(lon,stops):
 
     return 0
 
-    # for i in range(len(stops)):
-    #     if i == len(stops)-1: return len(stops)-1
-    #     if lon <= stops[i][3]: return i
-
-    
-# T = [0,0.43,1.59,1.87,1.96,2.5,2.8]
-# print(bis(3,T))
 
 def dist321(x1,y1,x2,y2): return (x1-x2)*(x1-x2) + (y1-y2)*(y1-y2)
 
@@ -120,13 +113,10 @@ def stopScheduler(allStops,stops):
         allStopList.append((curStop[0],curStop[1],forName))
     
     return allStopList
-    #print(allStopList)
 
 
 # print(idToName("stop_3_502",sortStops()))
 
-#vals = nearest(50.0017602,20.1467958,sortStops(),10) #Tyniec
-#vals = nearest(50.0138937,19.8725095,sortStops(),10) #ja
 # vals = nearest(50.0620246,19.9357855,sortStops(),10) #rynek
 # vals = nearest(50.8817595,20.5227226,stops,15) #kielce
 # vals = nearest(50.0184921,19.4110393,stops,5) # LEWO SRODEK

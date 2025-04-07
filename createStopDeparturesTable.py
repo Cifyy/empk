@@ -75,8 +75,6 @@ class stopDepartureCreator():
         data = pickle.loads(binaryData[0][0])
         return data
         
-    
-
 
 if __name__ == '__main__':
     import time

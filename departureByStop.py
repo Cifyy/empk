@@ -52,15 +52,6 @@ class depByStop():
         end = time.time()
         if self.debug: print("         Stop Group:", end-start)
         return setGroup
-
-    def LEGACY_createStopTable(self,stop_id,dayOfTheWeek): 
-        start = time.time()
-        self.c.execute(self.query,(stop_id,weekdayToService(dayOfTheWeek)))
-        columns = [column[0] for column in self.c.description]
-        data = [dict(zip(columns, row)) for row in self.c.fetchall()]
-        end = time.time()
-        if self.debug: print("             stopQuery:",end-start)
-        return data
     
     def createStopTable(self,stop_id,dayOfTheWeek): 
         start = time.time()
@@ -99,16 +90,24 @@ class depByStop():
         # end = time.time()
         # print("dump time:",end-start)
         return json.dumps(locationSchedule, cls=SetEncoder)
-
-
-
-if __name__ == '__main__':
-    handler = depByStop()
-
-    legacy = handler.LEGACY_createStopTable("stop_53_7703",1)
-    new = handler.createStopTable("stop_53_7703",1)
     
-    if new == legacy: print(":)")
+    # def LEGACY_createStopTable(self,stop_id,dayOfTheWeek): 
+    #     start = time.time()
+    #     self.c.execute(self.query,(stop_id,weekdayToService(dayOfTheWeek)))
+    #     columns = [column[0] for column in self.c.description]
+    #     data = [dict(zip(columns, row)) for row in self.c.fetchall()]
+    #     end = time.time()
+    #     if self.debug: print("             stopQuery:",end-start)
+    #     return data
+
+
+# if __name__ == '__main__':
+#     handler = depByStop()
+
+#     legacy = handler.LEGACY_createStopTable("stop_53_7703",1)
+#     new = handler.createStopTable("stop_53_7703",1)
+    
+#     if new == legacy: print("equals")
 
     # dwa.getNearestStops(50.0017602,20.1467958,5)
     # dwa.getNearestStops()
@@ -129,23 +128,3 @@ if __name__ == '__main__':
 
     # def getEntry(query,stop_id,serviceID):
         
-
-
-
-    # stops = [
-    #     {"id": 1, "latitude": 123.456, "longitude": 789.012},
-    #     {"id": 2, "latitude": 456.789, "longitude": 987.654},
-    #     {"id": 3, "latitude": 321.654, "longitude": 654.321}
-    # ]
-
-    # nested_json = []
-
-    # for stop in stops:
-    #     nested_json.append({
-    #         "id": stop["id"],
-    #         "latitude": stop["latitude"],
-    #         "longitude": stop["longitude"]
-    #     })
-    # import json
-    # nested_json_str = json.dumps(nested_json, indent=4)
-    # print(nested_json_str)

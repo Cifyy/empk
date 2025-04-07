@@ -40,10 +40,10 @@ async def read_item(lat: float = -1, lon: float = -1, amount: int = 5, dayOfTheW
     print("Total Time:",end - start)
     return Response(content=response)
 
-@app.get("/stopsDepartures/")
-async def read_item(weekDay: int = 1):
-    return Response(content=req.get, media_type="application/json")
+# @app.get("/stopsDepartures/")
+# async def read_item(weekDay: int = 1):
+#     return Response(content=req.get, media_type="application/json")
 
-@app.get("/shapes/")
-async def root():
-    return Response(content=req.getShapes(), media_type="application/json")
+# @app.get("/shapes/")
+# async def root():
+#     return Response(content=req.getShapes(), media_type="application/json")

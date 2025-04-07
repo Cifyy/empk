@@ -63,8 +63,6 @@ def getEntries(path1, itk):
 # tests
 if __name__ == '__main__':
     # fetchNewData()
-
-    
     print(readVersionFile())
     # print(checkVersion("2023-10-30-20:51:49"))
     # updateVersionFile("dwa43424323","321")

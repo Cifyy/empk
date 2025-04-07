@@ -67,7 +67,6 @@ class dbReqeustsHandler():
         # return json.dumps(data)
         
 
-# tests 
 # if __name__ == '__main__':
 #     reque = dbReqeustsHandler()
 #     print(reque.getStopIDs())
