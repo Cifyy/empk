@@ -1,5 +1,5 @@
 # empk
-A Python application made to fetch, process, and deliver public transport data from MPK Kraków. Featuring a RESTful API, it enables users to access up-to-date departure schedules for individual stops and to identify the closest stops based on location.
+A Python application made to fetch, process, and deliver public transport data from MPK Kraków. With a RESTful API, it enables users to access up-to-date departure schedules for individual stops and to identify the closest stops based on location.
 
 ## Overwiew 
 The project's purpose is to aggregate public transportation data in a structured and accessible manner. Its core objective is to transform raw transit data into actionable, easily accessible information through an API.
