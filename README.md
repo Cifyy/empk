@@ -6,7 +6,7 @@ The project's purpose is to aggregate public transportation data in a structured
 
 #### Project features two executable files:
 - Updater, runs daily at night, checking if newer public data is avaliable, based on version saved in versions.txt file. If an update exists it reinitializes the database with the latest data.
-- Api, hosts a FatAPI process on port 8000.
+- Api, hosts a FastAPI process on port 8000.
 
 | Endpoint                | Description                  | Parameters                                                                   |
 | ----------------------- | ---------------------------- | ---------------------------------------------------------------------------- |
